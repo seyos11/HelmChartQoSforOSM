@@ -7,6 +7,14 @@ spec:
   config: '{ 
       "cniVersion": "0.3.0",
       "type": "macvlan",
-      "master": "eth4.10",
-      "mode": "passthru"
+      "master": "eth4",
+      "mode": "bridge",
+      "ipam": {
+          "type": "static",
+          "addresses": [
+               {
+                   "address": "10.255.0.1/24"
+               }
+          ]
+       }
     }'
