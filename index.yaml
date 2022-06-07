@@ -6,7 +6,7 @@ entries:
     created: "2022-03-10T12:08:28.992520265+01:00"
     description: A Helm chart for Kubernetes
     digest: 820ebb14fb6aed9a5b1f871aa6bd6cd7a391799e8353cb1ff5652f278474c07d
-    name: knf1
+    name: knfQoS
     type: application
     urls:
     - https://seyos11.github.io/HelmChartQoSforOSM/knf1-0.1.0.tgz
@@ -17,7 +17,7 @@ entries:
     created: "2022-03-10T12:08:28.992520265+01:00"
     description: A Helm chart for Kubernetes
     digest: 820ebb14fb6aed9a5b1f871aa6bd6cd7a391799e8353cb1ff5652f278474c07d
-    name: knfrouter
+    name: knfvCPE
     type: application
     urls:
     - https://seyos11.github.io/HelmChartQoSforOSM/knfrouter-0.1.0.tgz
