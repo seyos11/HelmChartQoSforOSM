@@ -41,7 +41,7 @@ spec:
                 /usr/share/openvswitch/scripts/ovs-ctl start
                 ovs-vsctl add-br br0
                 ovs-vsctl add-port br0 vxlan1 -- set interface vxlan1 type=vxlan options:remote_ip=192.168.16.2
-                ovs-vsctl add-port br0 vxlan2 -- set interface vxlan2 type=vlxan options:remote_ip=10.255.0.2
+                ovs-vsctl add-port br0 vxlan2 -- set interface vxlan2 type=vxlan options:remote_ip=10.255.0.2
                 /bin/sleep 3650d
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
