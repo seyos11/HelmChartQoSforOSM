@@ -46,7 +46,6 @@ spec:
                 ovs-vsctl set-manager ptcp:6632
                 ovs-vsctl set-fail-mode br0 secure
                 ovs-vsctl set bridge br0 other-config:datapath-id=0000000000000001
-                ryu-manager ryu.app.rest_qos ryu.app.rest_conf_switch -/qos_simple_switch_13.py
                 /bin/sleep 3650d
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
