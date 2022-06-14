@@ -41,7 +41,14 @@ spec:
                 /usr/share/openvswitch/scripts/ovs-ctl start
                 ovs-vsctl add-br br0
                 ovs-vsctl add-port br0 vxlan1 -- set interface vxlan1 type=vxlan options:remote_ip=192.168.16.2
-                ovs-vsctl add-port br0 vxlan2 -- set interface vxlan2 type=vxlan options:remote_ip=10.255.0.2
+                ip link add vxlan2 type vxlan id 10 remote 10.255.0.2 dstport 4789 dev net1
+                ovs-vsctl add-port br0 vxlan1
+                ovs-vsctl set bridge br0 protocols=OpenFlow10,OpenFlow12,OpenFlow13
+                ovs-vsctl set-controller br0 tcp::127.0.0.1:6633
+                ovs-vsctl set-manager ptcp:6632
+                ovs-vsctl set-fail-mode br0 secure
+                ovs-vsctl set bridge br0 other-config:datapath-id=0000000000000001
+                ryu-manager ryu.app.rest_qos ryu.app.rest_conf_switch -/qos_simple_switch_13.py
                 /bin/sleep 3650d
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
