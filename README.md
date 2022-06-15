@@ -1,7 +1,6 @@
-# ubuntuimg
+# HelmChart for knf of Qos and router
 
-Este repositorio está basado en el repositorio de José Vírseda(josevirseda) y contiene un helm chart para ser empleado posteriormente, en nuestro caso, en OSM.
-
+Este repositorio contiene dos Helm Charts para su despliegue en OSM. Uno de ellos despliega un pod con la finalidad de establecer una política de calidad servicio y gestionar el acceso del tráfico de los clientes. El otro despliega un router realizando las funciones del servidor DHCP y NAT. 
 
 La primera tarea a realizar es la de generar una estructura adecuada para el Helm Chart. Por un lado tenemos un directorio (src/<nameOfOurChart>) donde se alojan los templates y el chart en sí. También encontramos bajo este directorio el archivo values.yaml donde se encuentran los valores que se envían a los templates de kubernetes, facilitándo así una mayor automatización del despliegue de kubernetes así como mayor capacidad a la hora de configurar dicho despliegue. 
 
