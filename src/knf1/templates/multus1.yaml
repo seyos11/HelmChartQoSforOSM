@@ -9,7 +9,7 @@ spec:
       "cniVersion": "0.3.0",
       "type": "macvlan",
       "master": "eth4.10",
-      "mode": "bridge",
+      "mode": "passthru",
       "ipam": {
           "type": "static",
           "addresses": [
