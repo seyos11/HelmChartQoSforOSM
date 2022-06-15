@@ -40,6 +40,7 @@ spec:
             - |
                 /usr/share/openvswitch/scripts/ovs-ctl start
                 ovs-vsctl add-br br1
+                ovs-vsctl add-port br1 -- set interface vxlan1 type=vxlan options:remote_ip=192.168.16.1
                 /sbin/ifconfig br1 192.168.255.1/24
                 service isc-dhcp-server restart
                 /usr/bin/vnx_config_nat br1 net1
