@@ -42,9 +42,6 @@ spec:
                 ovs-vsctl add-br br1
                 /sbin/ifconfig br1 192.168.255.1/24
                 service isc-dhcp-server restart
-                ip link add vxlan2 type vxlan id 1 remote 192.168.16.1 dstport 8472 dev net2
-                osv-vsctl add-port br1 vxlan2
-                ifconfig vxlan2 up
                 /usr/bin/vnx_config_nat br1 net1
                 ip route del default
                 ip route add 0.0.0.0/0 via 10.2.3.254 
