@@ -1,4 +1,4 @@
-# ubuntuimg
+# Helm Chart para OSM
 
 Este repositorio está basado en el repositorio de José Vírseda(josevirseda) y contiene un helm chart para ser empleado posteriormente, en nuestro caso, en OSM.
 
